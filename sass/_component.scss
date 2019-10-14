@@ -1,0 +1,230 @@
+// Buttons
+
+:link,
+:visited {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.btn {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: var(--color-white);
+  font-weight: 300;
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  cursor: pointer;
+  outline: none;
+  transition: all .3s;
+
+
+  &:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  &-arrow {
+    font-size: 2rem;
+    margin-left: 2rem;
+    transition: all .3s;
+
+  }
+
+}
+
+.btn:hover>.btn-arrow {
+  transform: rotate(90deg);
+}
+
+.btn-form {
+  font-size: 2rem;
+}
+
+// MENU LI 
+
+.menu-li {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+
+// NAV FIXED
+
+.nav-fixed {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  animation: popDown .5s ease-in-out;
+}
+
+
+// SKILLS
+.skill {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 90%;
+    margin: 0 auto
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 80%;
+  }
+
+  &_container {
+    width: 55rem;
+    height: 3rem;
+    background-color: var(--color-grey-light-3);
+    display: inline-block;
+    position: relative;
+    margin: 1rem 0;
+
+
+    p {
+      font-size: 1.5rem;
+      line-height: 3rem;
+      position: absolute;
+      color: var(--color-white);
+    }
+
+    p:nth-child(2) {
+      width: 10rem;
+      height: 100%;
+      padding-left: 1rem;
+      background-color: rgba($color: #000000, $alpha: .3);
+    }
+
+    p:nth-child(3) {
+      right: 1rem;
+      color: rgba($color: #000000, $alpha: .6)
+    }
+  }
+
+  &_graph {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    background-color: var(--color-primary);
+  }
+}
+
+// OVERLAY
+.overlay {
+
+  opacity: 0;
+
+  &_content {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      top: 10%;
+      left: 25%;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #E31B6D;
+      margin: 1rem 0;
+    }
+
+
+    a {
+      position: absolute;
+      bottom: -200%;
+      left: 30%;
+      border: 2px solid #E31B6D;
+      color: inherit;
+
+      @media only screen and (max-width: $bp-medium) {
+        left: 25%;
+        font-size: 3rem;
+      }
+
+      &:hover {
+        background-color: #E31B6D;
+        border-color: #E31B6D;
+        color: var(--color-white);
+      }
+    }
+  }
+}
+
+// FORM 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  &_input,
+  &_textarea {
+    background-color: #1E242C;
+    width: 80%;
+    padding: .8rem 1.5rem;
+    font-size: 1.6rem;
+    border: none;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+    outline: none;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 70%;
+    }
+  }
+
+
+  &_textarea {
+    height: 20rem;
+    font-size: 2rem;
+  }
+}
+
+// MOBILE MENU 
+
+.burger {
+  display: none;
+  cursor: pointer;
+
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 10rem;
+  }
+}
+
+.burger div {
+  width: 2.5rem;
+  height: 3px;
+  background-color: var(--color-white);
+  margin: 5px;
+  transition: all .3s ease;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.toggle .line-1 {
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.toggle .line-2 {
+  opacity: 0;
+}
+
+.toggle .line-3 {
+  transform: translateY(-8px) rotate(45deg);
+}
