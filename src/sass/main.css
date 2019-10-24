@@ -58,10 +58,6 @@ body {
   font-weight: 400;
   line-height: 1.2;
   color: #626366;
-}
-
-body {
-  width: 100%;
   overflow-x: hidden;
 }
 
@@ -82,6 +78,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-white);
   min-height: 100vh;
+  position: relative;
 }
 
 .header_content {
@@ -99,6 +96,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .header_content-heading {
@@ -134,7 +136,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .nav_content {
+    margin-left: 0;
+    padding: 0;
+    background-color: var(--color-background);
+  }
 }
 
 .nav_content-ul {
@@ -151,25 +160,9 @@ body {
 
 @media only screen and (max-width: 40.625em) {
   .nav_content-ul {
-    position: absolute;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    right: 0;
-    top: 6rem;
-    height: 100vh;
-    background-color: var(--color-background);
-    width: 50%;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transition: -webkit-transform .5s ease-in;
-    transition: -webkit-transform .5s ease-in;
-    transition: transform .5s ease-in;
-    transition: transform .5s ease-in, -webkit-transform .5s ease-in;
-    z-index: 1000;
+    width: 100%;
+    display: none;
+    padding: 2rem;
   }
 }
 
@@ -179,7 +172,9 @@ body {
 
 @media only screen and (max-width: 40.625em) {
   .nav_content-ul li {
-    opacity: 0;
+    display: block;
+    margin-top: 6rem;
+    text-align: left;
   }
 }
 
@@ -333,6 +328,16 @@ body {
   color: #009ADA;
 }
 
+.photo {
+  background-image: url("../img/foto personale.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 25rem;
+  height: 27rem;
+}
+
 .portfolio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -366,6 +371,12 @@ body {
   max-width: 120rem;
   margin: 0;
   padding: 0 2rem;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .portfolio_cards {
+    width: 90%;
+  }
 }
 
 .portfolio_cards-card {
@@ -634,11 +645,36 @@ body {
   font-size: 2rem;
 }
 
-.menu-li {
+.mobile-li {
   font-size: 1.8rem;
   font-weight: 300;
   text-transform: uppercase;
   padding: 0 2rem;
+}
+
+.toggle {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--color-nav-footer);
+  text-align: right;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 4rem;
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .toggle {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 40.625em) {
+  .active {
+    display: block;
+  }
 }
 
 .nav-fixed {
@@ -670,14 +706,8 @@ body {
 
 @media only screen and (max-width: 75em) {
   .skill {
-    width: 90%;
-    margin: 0 auto;
-  }
-}
-
-@media only screen and (max-width: 40.625em) {
-  .skill {
     width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -688,6 +718,12 @@ body {
   display: inline-block;
   position: relative;
   margin: 1rem 0;
+}
+
+@media only screen and (max-width: 40.625em) {
+  .skill_container {
+    width: 50rem;
+  }
 }
 
 .skill_container p {
@@ -716,49 +752,39 @@ body {
   background-color: var(--color-primary);
 }
 
-.overlay {
-  opacity: 0;
+.animationHtml {
+  -webkit-animation: html 1.5s linear forwards;
+          animation: html 1.5s linear forwards;
 }
 
-.overlay_content {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  font-size: 2rem;
+.animationCss {
+  -webkit-animation: css 1.5s linear forwards;
+          animation: css 1.5s linear forwards;
 }
 
-@media only screen and (max-width: 50em) {
-  .overlay_content {
-    top: 10%;
-    left: 25%;
-    font-size: 2.5rem;
-  }
+.animationSass {
+  -webkit-animation: sass 1.5s linear forwards;
+          animation: sass 1.5s linear forwards;
 }
 
-.overlay_content p {
-  color: #E31B6D;
-  margin: 1rem 0;
+.animationJs {
+  -webkit-animation: javascript 1.5s linear forwards;
+          animation: javascript 1.5s linear forwards;
 }
 
-.overlay_content a {
-  position: absolute;
-  bottom: -200%;
-  left: 30%;
-  border: 2px solid #E31B6D;
-  color: inherit;
+.animationJq {
+  -webkit-animation: jquery 1.5s linear forwards;
+          animation: jquery 1.5s linear forwards;
 }
 
-@media only screen and (max-width: 50em) {
-  .overlay_content a {
-    left: 25%;
-    font-size: 3rem;
-  }
+.animationUi {
+  -webkit-animation: uidesign 1.5s linear forwards;
+          animation: uidesign 1.5s linear forwards;
 }
 
-.overlay_content a:hover {
-  background-color: #E31B6D;
-  border-color: #E31B6D;
-  color: var(--color-white);
+.animationAi {
+  -webkit-animation: illustrator 1.5s linear forwards;
+          animation: illustrator 1.5s linear forwards;
 }
 
 .form {
@@ -799,46 +825,9 @@ body {
   font-size: 2rem;
 }
 
-.burger {
-  display: none;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 40.625em) {
-  .burger {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 10rem;
-  }
-}
-
-.burger div {
-  width: 2.5rem;
-  height: 3px;
-  background-color: var(--color-white);
-  margin: 5px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.nav-active {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
-}
-
-.toggle .line-1 {
-  -webkit-transform: translateY(8px) rotate(-45deg);
-          transform: translateY(8px) rotate(-45deg);
-}
-
-.toggle .line-2 {
-  opacity: 0;
-}
-
-.toggle .line-3 {
-  -webkit-transform: translateY(-8px) rotate(45deg);
-          transform: translateY(-8px) rotate(45deg);
+.icon-about {
+  width: 12rem;
+  height: 13rem;
 }
 
 @-webkit-keyframes fromBottom {
@@ -938,6 +927,141 @@ body {
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes html {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes html {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes css {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes css {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes sass {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes sass {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes sass {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes javascript {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes javascript {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes jquery {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes jquery {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes uidesign {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes uidesign {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@-webkit-keyframes illustrator {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes illustrator {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 60%;
   }
 }
 /*# sourceMappingURL=main.css.map */

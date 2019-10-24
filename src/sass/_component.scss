@@ -43,11 +43,36 @@
 
 // MENU LI 
 
-.menu-li {
+.mobile-li {
   font-size: 1.8rem;
   font-weight: 300;
   text-transform: uppercase;
   padding: 0 2rem;
+}
+
+// MOBILE MENU
+
+.toggle {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--color-nav-footer);
+  text-align: right;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 4rem;
+  display: none;
+  cursor: pointer;
+
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+  }
+
+}
+
+.active {
+  @media only screen and (max-width: $bp-small) {
+    display: block;
+  }
 }
 
 // NAV FIXED
@@ -71,13 +96,11 @@
   align-items: center;
 
   @media only screen and (max-width: $bp-largest) {
-    width: 90%;
+    width: 80%;
     margin: 0 auto
   }
 
-  @media only screen and (max-width: $bp-small) {
-    width: 80%;
-  }
+
 
   &_container {
     width: 55rem;
@@ -86,6 +109,10 @@
     display: inline-block;
     position: relative;
     margin: 1rem 0;
+
+    @media only screen and (max-width: $bp-small) {
+      width: 50rem;
+    }
 
 
     p {
@@ -116,48 +143,34 @@
   }
 }
 
-// OVERLAY
-.overlay {
+// SKILLS BAR ANIMATIONS
 
-  opacity: 0;
+.animationHtml {
+  animation: html 1.5s linear forwards;
+}
 
-  &_content {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 2rem;
+.animationCss {
+  animation: css 1.5s linear forwards;
+}
 
-    @media only screen and (max-width: $bp-medium) {
-      top: 10%;
-      left: 25%;
-      font-size: 2.5rem;
-    }
+.animationSass {
+  animation: sass 1.5s linear forwards;
+}
 
-    p {
-      color: #E31B6D;
-      margin: 1rem 0;
-    }
+.animationJs {
+  animation: javascript 1.5s linear forwards;
+}
 
+.animationJq {
+  animation: jquery 1.5s linear forwards;
+}
 
-    a {
-      position: absolute;
-      bottom: -200%;
-      left: 30%;
-      border: 2px solid #E31B6D;
-      color: inherit;
+.animationUi {
+  animation: uidesign 1.5s linear forwards;
+}
 
-      @media only screen and (max-width: $bp-medium) {
-        left: 25%;
-        font-size: 3rem;
-      }
-
-      &:hover {
-        background-color: #E31B6D;
-        border-color: #E31B6D;
-        color: var(--color-white);
-      }
-    }
-  }
+.animationAi {
+  animation: illustrator 1.5s linear forwards;
 }
 
 // FORM 
@@ -191,40 +204,7 @@
   }
 }
 
-// MOBILE MENU 
-
-.burger {
-  display: none;
-  cursor: pointer;
-
-  @media only screen and (max-width: $bp-small) {
-    display: block;
-    position: absolute;
-    top: 1rem;
-    right: 10rem;
-  }
-}
-
-.burger div {
-  width: 2.5rem;
-  height: 3px;
-  background-color: var(--color-white);
-  margin: 5px;
-  transition: all .3s ease;
-}
-
-.nav-active {
-  transform: translateX(0%);
-}
-
-.toggle .line-1 {
-  transform: translateY(8px) rotate(-45deg);
-}
-
-.toggle .line-2 {
-  opacity: 0;
-}
-
-.toggle .line-3 {
-  transform: translateY(-8px) rotate(45deg);
+.icon-about {
+  width: 12rem;
+  height: 13rem;
 }

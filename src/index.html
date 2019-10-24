@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Ciao, sono un Web Developer e Web Designer residente a Castelfranco Veneto">
 
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700&display=swap" rel="stylesheet">
@@ -13,16 +14,17 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <!-- STYLE -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="sass/main.css">
-  <title>Portfolio Hamza Bouzid</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="sass/main.css?cb=1571857658501">
+  <title>Web Developer Hamza Bouzid, Castelfranco Veneto</title>
 </head>
 
 <body class="body">
 
 
   <!-- HEADER -->
-  <header class="header" id="home">
-    <div class="header_content">
+  <header class="header" id="particles-js">
+    <div class="header_content" id="home"> 
       <h1 class="header_content-heading">
         Ciao, mi chiamo <span>Hamza Bouzid</span>. Sono un Front-end development.
       </h1>
@@ -33,52 +35,50 @@
 
   <!-- NAVIGATION -->
   <nav class="nav">
+      <div class="toggle">
+          <i class="fas fa-bars menu"></i>
+      </div>
     <div class="nav_content">
       <ul class="nav_content-ul">
-        <li><a class="smooth-scrool menu-li" href="#home">Home</a></li>
-        <li><a class="smooth-scrool menu-li" href="#about">Chi Sono</a></li>
-        <li><a class="smooth-scrool menu-li" href="#port">Portfolio</a></li>
-        <li><a class="smooth-scrool menu-li" href="#cont">Contatti</a></li>
+        <li><a class="smooth-scrool mobile-li" href="#home">Home</a></li>
+        <li><a class="smooth-scrool mobile-li" href="#about">Chi Sono</a></li>
+        <li><a class="smooth-scrool mobile-li" href="#port">Portfolio</a></li>
+        <li><a class="smooth-scrool mobile-li" href="#cont">Contatti</a></li>
       </ul>
-      <div class="burger">
-        <div class="line-1"></div>
-        <div class="line-2"></div>
-        <div class="line-3"></div>
-      </div>
     </div>
   </nav> 
 
   <!-- ABOUT SECTION -->
   <section class="about" id="about">
-    <div class="about_heading" data-aos="fade-left" data-aos="flip-right">
+    <div class="about_heading" data-aos="fade-left">
       <h2>Chi Sono</h2>
     </div>
     <div class="about_services">
       <div class="about_services-service" data-aos="flip-right">
-        <i class="far fa-lightbulb"></i>
+        <i class="fas fa-space-shuttle icon-about"></i>
         <h3>Veloce</h3>
         <p>Siti web veloci e senza lag interattivi, la mia priorita piu grande </p>
       </div>
       <div class="about_services-service" data-aos="flip-right" data-aos-duration="1400">
-        <i class="far fa-lightbulb"></i>
-        <h3>Veloce</h3>
-        <p>Siti web veloci e senza lag interattivi, la mia priorita piu grande </p>
+        <i class="fas fa-mobile-alt icon-about"></i>
+        <h3>Responsive</h3>
+        <p>I mie siti funzionano su tutti i device, grandi o piccoli</p>
       </div>
       <div class="about_services-service" data-aos="flip-right" data-aos-duration="1800">
-        <i class="far fa-lightbulb"></i>
-        <h3>Veloce</h3>
-        <p>Siti web veloci e senza lag interattivi, la mia priorita piu grande </p>
+        <i class="far fa-lightbulb icon-about"></i>
+        <h3>intuitivo</h3>
+        <p>Siti web con un UI Design facile da usare ed intuitivo </p>
       </div>
       <div class="about_services-service" data-aos="flip-right" data-aos-duration="2200">
-        <i class="far fa-lightbulb"></i>
-        <h3>Veloce</h3>
-        <p>Siti web veloci e senza lag interattivi, la mia priorita piu grande </p>
+        <i class="fas fa-dove icon-about"></i>
+        <h3>Dinamico</h3>
+        <p>I siti non devono essere statici, mi piace dare vita alle pagine web</p>
       </div>
     </div>
     <div class="about_content">
       <!--Description-->
       <div class="about_content-description" data-aos="fade-right" >
-        <img src="" alt="">
+        <div class="photo"></div>
         <h3>Chi é questo tipo?</h3>
         <p>Sono un Front-End Developer di Castelfranco Veneto, TV.
           Ho una passione per il UI Design, animazioni e creare siti web
@@ -91,37 +91,37 @@
       <div class="about_content-skills" data-aos="fade-left">
         <div class="skill">
           <div class="skill_container">
-            <div class="skill_graph" style="width:90%;"></div>
+            <div class="skill_graph html animationHtml"></div>
             <p>HTML</p>
             <p>90%</p>
           </div>
           <div class="skill_container">
-            <div class="skill_graph" style="width:80%;"></div>
+            <div class="skill_graph css animationCss"></div>
             <p>CSS</p>
             <p>80%</p>
           </div>
           <div class="skill_container">
-            <div class="skill_graph" style="width:60%;"></div>
+            <div class="skill_graph sass animationSass"></div>
             <p>SASS</p>
             <p>60%</p>
           </div>
           <div class="skill_container">
-            <div class="skill_graph" style="width:70%;"></div>
+            <div class="skill_graph javascript animationJs"></div>
             <p>Javascript</p>
             <p>70%</p>
           </div>
           <div class="skill_container">
-            <div class="skill_graph" style="width:60%;"></div>
+            <div class="skill_graph jquery animationJq"></div>
             <p>JQuery</p>
             <p>60%</p>
           </div>
           <div class="skill_container">
-            <div class="skill_graph" style="width:50%;"></div>
+            <div class="skill_graph uidesign animationUi"></div>
             <p>UI Design</p>
             <p>50%</p>
           </div>
           <div class="skill_container">
-            <div class="skill_graph" style="width:60%;"></div>
+            <div class="skill_graph illustrator animationAi"></div>
             <p>Illustrator</p>
             <p>60%</p>
           </div>
@@ -137,11 +137,11 @@
     </div>
     <div class="portfolio_cards">
      <div class="portfolio_cards-card" data-aos="fade-left">
-       <img src="img/image-2.jpg" alt="Progetto">
+       <img src="img/Imagine-projetto-Bookapp.jpg" alt="Progetto">
        <div class="card_content">
          <h3>BookApp</h3>
          <p>Questa web app e stata realizzata con <span>Html, Css, Vanilla Javascript</span></p>
-         <a href="#" class="btn">vai al stio</a>
+         <a href="https://booksapp.netlify.com/?_ga=2.20372027.2034257660.1567266772-1480469317.1566290127" target="_blank" class="btn">vai al stio</a>
        </div>
      </div>
      <div class="portfolio_cards-card" data-aos="fade-right">
@@ -153,7 +153,7 @@
        </div>
      </div>
      <div class="portfolio_cards-card" data-aos="fade-left">
-       <img src="img/image-4.jpg" alt="Progetto">
+       <img src="img/image-2.jpg" alt="Progetto">
        <div class="card_content">
          <h3>BookApp</h3>
          <p>Questa web app e stata realizzata con <span>Html, Css, Vanilla Javascript</span></p>
@@ -165,23 +165,23 @@
 
   <!-- CONTACT SECTION -->
   <section class="contact">
-    <div class="contact_heading" id="cont" data-aos="fade-down">
+    <div class="contact_heading" id="cont">
       <h2>Contatti</h2>
     </div>
     <div class="contact_content">
-      <div class="contact_content-col-1" data-aos="fade-right">
+      <div class="contact_content-col-1">
         <h3>Hai qualche domanda oppure vuoi lavorare insieme?</h3>
         <p>Sentiti libero di contattarmi. Sono sempre aperto a discutere di nuovi progetti, idee creative, o oppurtunita
           di far parte della tua visione</p>
 
-        <div class="contatti"><i class="fas fa-phone"></i><a href="#">+393667038598</a></div>
-        <div class="contatti"><i class="fas fa-envelope"></i><a href="#">hamzabouzid10@gmail.com</a></div>
-        <div class="contatti"><i class="fas fa-map-marker-alt"></i><a href="#">Castelfranco Veneto. TV</a></div>
+        <div class="contatti"><i class="fas fa-phone"></i><a href="tel:+393667038598">+393667038598</a></div>
+        <div class="contatti"><i class="fas fa-envelope"></i><a href="mailto:hamzabouzid10@gmail.com">hamzabouzid10@gmail.com</a></div>
+        <div class="contatti"><i class="fas fa-map-marker-alt"></i><a href="https://goo.gl/maps/k3h5UCxDBbhnR8mE9" target="_blank">Castelfranco Veneto. TV</a></div>
       </div>
-      <div class="contact_content-col-2" data-aos="fade-left">
-        <form action="#" class="form">
-          <input type="text" class="form_input" id="name" placeholder="Nome" required>
-          <input type="email" class="form_input" id="email" placeholder="Email" required>
+      <div class="contact_content-col-2">
+        <form action="POST" data-netlify="true" class="form">
+          <input type="text" class="form_input" name="name" id="name" placeholder="Nome" required>
+          <input type="email" class="form_input" id="email" name="email" placeholder="Email" required>
           <textarea name="message" class="form_textarea" placeholder="Scrivi il tuo messaggio" required></textarea>
           <input type="submit" class="btn btn-form" id="submit" value="Invia messaggio">
         </form>
@@ -192,7 +192,7 @@
   <!-- CONTACT SECTION -->
   <footer class="footer">
     <div class="footer_social">
-      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="https://github.com/Hamza-bouzid" target="_blank"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-linkedin-in"></i></a>
     </div>
     <div class="footer_copy">
@@ -209,9 +209,12 @@
     });
   </script>
 
-  <script src="easing/jquery.easing.1.3.js"></script>
+  <script src="js/easing/jquery.easing.1.3.js"></script>
   <script src="js/JQuery.js"></script>
+  <script src="js/particles.js"></script>
   <script src="js/app.js"></script>
+  
+  <script src="all.js?cb=1571857658501"></script>
 </body>
 
 </html>
